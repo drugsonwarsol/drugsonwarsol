@@ -3,6 +3,10 @@
   "version": "0.2.1-beta",
   "description": "A turn-based strategy video game in which the player assumes the role of a drug dealer engaged in arbitrage.",
   "main": "src/index.ts",
+"engines": {
+  "node": ">=18.0.0",
+  "npm": ">=9.2.0"
+},
   "scripts": {
     "prebuild": "npm install --legacy-peer-deps",
     "build": "xata codegen && react-scripts build",
@@ -82,7 +86,6 @@
       "last 1 safari version"
     ]
   },
-  "packageManager": "yarn@3.5.0",
   "husky": {
     "hooks": {
       "pre-commit": "echo ”[Husky] pre-commit”"
