@@ -1,5 +1,6 @@
 [build]
-  command = "npm install && npm run build"
+  base = ""
+  command = "CI= npm install --legacy-peer-deps && npm run build"
   functions = "netlify/functions"
   publish = "build"
 
@@ -8,3 +9,9 @@
 
 [[plugins]]
   package = "@xata.io/netlify"
+
+[build.environment]
+  NODE_VERSION = "18.20.6"
+  NPM_VERSION = "10.8.2"
+  YARN_ENABLE = "false"
+  CI = "false"
