@@ -4,6 +4,7 @@
   "description": "A turn-based strategy video game in which the player assumes the role of a drug dealer engaged in arbitrage.",
   "main": "src/index.ts",
   "scripts": {
+    "prebuild": "npm install --legacy-peer-deps",
     "build": "xata codegen && react-scripts build",
     "start": "xata codegen && react-scripts start",
     "start:serve": "netlify functions:serve",
@@ -24,6 +25,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@opentelemetry/api": "1.9.0",
     "@testing-library/dom": "^9.2.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
@@ -45,9 +47,16 @@
     "typescript": "5.0.4"
   },
   "dependencies": {
+    "@babel/core": "^7.x",
+    "@babel/plugin-syntax-flow": "^7.x",
+    "@babel/plugin-transform-react-jsx": "^7.x",
     "@netlify/functions": "^1.4.0",
+    "@opentelemetry/api": "^1.9.0",
+    "@opentelemetry/core": "^1.9.0",
     "@reduxjs/toolkit": "^1.9.5",
+    "@types/node": "^18.x",
     "@xata.io/client": "next",
+    "esbuild": "^0.19.11",
     "react": "^18.2.0",
     "react-currency-input-field": "^3.6.10",
     "react-dom": "^18.2.0",
@@ -57,7 +66,9 @@
     "redux": "^4.2.1",
     "redux-logger": "^3.0.6",
     "redux-persist": "^6.0.0",
-    "styled-components": "^5.3.10"
+    "rollup": "^2.x",
+    "styled-components": "^5.3.10",
+    "typescript": "5.0.4"
   },
   "browserslist": {
     "production": [

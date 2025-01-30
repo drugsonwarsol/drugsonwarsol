@@ -1,6 +1,10 @@
 [build]
+  command = "npm install && npm run build"
+  functions = "netlify/functions"
   publish = "build"
-  command = "CI= yarn build"
+
+[functions]
+  node_bundler = "nft"
 
 [[plugins]]
-package = "@xata.io/netlify"
+  package = "@xata.io/netlify"
