@@ -5161,12 +5161,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@xata.io/client@npm:0.23.5, @xata.io/client@npm:^0.23.5":
+"@xata.io/client@npm:0.23.5":
   version: 0.23.5
   resolution: "@xata.io/client@npm:0.23.5"
   peerDependencies:
     typescript: ">=4.5"
   checksum: 4291d8d0e2a77f005416027a61f410934b4a60ff15a52aef1b0177118f12d5c59f78e8b73fde4a0d1fa80a563f0583572031839e7bdb49292a832427f3389c27
+  languageName: node
+  linkType: hard
+
+"@xata.io/client@npm:next":
+  version: 0.0.0-next.va121e4207b94bfe0a3c025fc00b247b923880930
+  resolution: "@xata.io/client@npm:0.0.0-next.va121e4207b94bfe0a3c025fc00b247b923880930"
+  peerDependencies:
+    typescript: ">=4.5"
+  checksum: bf98d615e577db43da6d7b086365131e413878f089a4d5af854a99662730f1352ce8aa33edfacf7291debc0442d9c55e2a5f623c3ed3f00d385c48a20f363717
   languageName: node
   linkType: hard
 
@@ -8925,7 +8934,7 @@ __metadata:
     "@types/styled-components": ^5.1.26
     "@types/testing-library__jest-dom": ^5.14.5
     "@xata.io/cli": ^0.12.0
-    "@xata.io/client": ^0.23.5
+    "@xata.io/client": next
     "@xata.io/netlify": ^0.1.1
     eslint: ^8.39.0
     eslint-config-react-app: ^7.0.1

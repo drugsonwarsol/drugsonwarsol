@@ -1,0 +1,30 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cudacmetrfea4ndaolt0",
+    "operations": [
+      {
+        "add_column": {
+          "table": "scores",
+          "column": {
+            "name": "season",
+            "type": "text",
+            "comment": "{\"xata.link\":\"season\"}",
+            "nullable": true,
+            "references": {
+              "name": "season_link",
+              "table": "season",
+              "column": "xata_id",
+              "on_delete": "SET NULL"
+            }
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cudacmetrfea4ndaolt0",
+  "parent": "mig_cudacfe34skj7mihnpkg",
+  "schema": "public",
+  "startedAt": "2025-01-29T22:06:18.714608Z"
+}

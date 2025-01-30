@@ -18,5 +18,5 @@
     "jsx": "react-jsx",
     "verbatimModuleSyntax": true
   },
-  "include": ["src"],
+  "include": ["src", "_lib/xata.codegen.ts"],
 }

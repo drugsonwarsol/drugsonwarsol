@@ -43,7 +43,8 @@ export const postScore = createAsyncThunk<PlayerScore, PlayerScoreData>(
       method: "POST",
       body: JSON.stringify(score),
     });
-    return (await response.json()) as PlayerScore;
+    const data = await response.json();
+    return data as PlayerScore;
   }
 );
 
@@ -59,6 +60,7 @@ export const editScoreName = createAsyncThunk<PlayerScore, EditScoreName>(
       method: "PUT",
       body: JSON.stringify(name),
     });
+    console.log(response.json())
     return (await response.json()) as PlayerScore;
   }
 );

@@ -16,8 +16,7 @@ export type DatabaseSchema = {};
 const DatabaseClient = buildClient();
 
 const defaultOptions = {
-  databaseURL:
-    "https://drugwars-jeuoie.us-east-1.xata.sh/db/drugwarsdbbbb:main",
+  databaseURL: "https://drugwars-jeuoie.us-east-1.xata.sh/db/drugwarsdbbbb",
 };
 
 export class XataClient extends DatabaseClient<DatabaseSchema> {

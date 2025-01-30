@@ -1,5 +1,5 @@
 {
-  "databaseURL": "https://Menthol-AI-s-workspace-jeuoie.us-east-1.xata.sh/db/test",
+  "databaseURL": "https://drugwars-jeuoie.us-east-1.xata.sh/db/drugwarsdbbbb",
   "codegen": {
     "output": "src/xata.ts"
   }

@@ -1,0 +1,24 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cuda4g7lmd4pfs40paig",
+    "operations": [
+      {
+        "add_column": {
+          "table": "season",
+          "column": {
+            "name": "endDate",
+            "type": "timestamptz",
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cuda4g7lmd4pfs40paig",
+  "parent": "mig_cuda4cetrfea4ndaolj0",
+  "schema": "public",
+  "startedAt": "2025-01-29T21:48:48.656527Z"
+}

@@ -22,7 +22,7 @@ const handler: Handler = async (
       .getMany({
         pagination: { size: 10 },
       });
-
+console.log(JSON.stringify(records))
     return {
       statusCode: 200,
       body: JSON.stringify(records),

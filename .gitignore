@@ -37,6 +37,5 @@ node_modules/
 .env
 
 # Xata
-xata.codegen.ts
 .vercel
 .yarn

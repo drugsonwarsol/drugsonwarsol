@@ -47,7 +47,7 @@
   "dependencies": {
     "@netlify/functions": "^1.4.0",
     "@reduxjs/toolkit": "^1.9.5",
-    "@xata.io/client": "^0.23.5",
+    "@xata.io/client": "next",
     "react": "^18.2.0",
     "react-currency-input-field": "^3.6.10",
     "react-dom": "^18.2.0",

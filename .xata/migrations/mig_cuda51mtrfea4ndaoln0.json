@@ -1,0 +1,24 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cuda51mtrfea4ndaoln0",
+    "operations": [
+      {
+        "add_column": {
+          "table": "scores",
+          "column": {
+            "name": "name",
+            "type": "text",
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cuda51mtrfea4ndaoln0",
+  "parent": "mig_cuda4uetrfea4ndaolm0",
+  "schema": "public",
+  "startedAt": "2025-01-29T21:49:58.800501Z"
+}

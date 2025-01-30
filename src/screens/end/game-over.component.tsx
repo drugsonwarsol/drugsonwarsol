@@ -35,7 +35,7 @@ export default function GameOver() {
   const sharkBalance = useAppSelector(selectSharkBalance);
   const scoreIsPosted = useAppSelector(selectLeaderboardScoreIsPosted);
   const scoreId = useAppSelector(selectLeaderboardScoreId);
-
+  const [id, setId] = useState(null)
   const profit = playerMoney + bankBalance - sharkBalance;
   const rank = profit > 0 ? Math.floor((profit / 10000000) * 100) : 0;
 
@@ -63,7 +63,7 @@ export default function GameOver() {
       postScore({
         name: randomNameData[0].name,
         score,
-        season: currentSeasonData[0].id,
+        season: currentSeasonData[0].xata_id,
       })
     );
   };
@@ -90,7 +90,15 @@ export default function GameOver() {
   const [enterName, setEnterName] = useState(false);
 
   const handleUpdateScoreName = (value: string) => {
-    scoreId && dispatch(editScoreName({ name: value, id: scoreId }));
+    console.log(scoreId, value)
+    if (scoreId && value) {
+      dispatch(editScoreName({ name: value, id: scoreId }));
+    }
+    setEnterName(false);
+  };
+
+  const handleGoBack = () => {
+
     setEnterName(false);
   };
 
@@ -102,7 +110,7 @@ export default function GameOver() {
           type="text"
           labelText="Whats your name pal?"
           handleValue={handleUpdateScoreName}
-          goBack={() => setEnterName(false)}
+          goBack={handleGoBack}
         />
       ) : (
         <>

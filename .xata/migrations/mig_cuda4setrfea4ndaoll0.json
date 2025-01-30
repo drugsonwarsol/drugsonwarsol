@@ -1,0 +1,24 @@
+{
+  "done": true,
+  "migration": {
+    "name": "mig_cuda4setrfea4ndaoll0",
+    "operations": [
+      {
+        "add_column": {
+          "table": "randomNames",
+          "column": {
+            "name": "name",
+            "type": "text",
+            "comment": "",
+            "nullable": true
+          }
+        }
+      }
+    ]
+  },
+  "migrationType": "pgroll",
+  "name": "mig_cuda4setrfea4ndaoll0",
+  "parent": "mig_cuda4oflmd4pfs40pajg",
+  "schema": "public",
+  "startedAt": "2025-01-29T21:49:38.763219Z"
+}

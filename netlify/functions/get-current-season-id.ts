@@ -21,6 +21,7 @@ const handler: Handler = async (
       .select(["id"])
       .getMany();
 
+      console.log(JSON.stringify(records))
     return {
       statusCode: 200,
       body: JSON.stringify(records),

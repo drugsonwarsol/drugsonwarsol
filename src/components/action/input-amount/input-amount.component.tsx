@@ -2,10 +2,8 @@ import type { FC, FormEvent } from "react";
 import { useState } from "react";
 import Button from "../../button/button.component";
 import Input from "../../input/input.component";
-
 import CurrencyInput from "react-currency-input-field";
 import DialogBox from "../../dialog-box/dialog-box.component";
-
 import { InputForm } from "./input-amount.styles";
 
 type InputAmountProps = {
@@ -23,16 +21,28 @@ const InputAmount: FC<InputAmountProps> = ({
   handleValue,
   goBack,
 }) => {
-  const [inputValue, setinputValue] = useState<string | undefined>(undefined);
+  const [inputValue, setInputValue] = useState<string>("");
 
   const handleOnSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    handleValue(inputValue);
+  };
 
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-    const value = Object.fromEntries(formData.entries())[name];
+  const handleInputChange = (value: string | undefined) => {
+    if (type === "currency") {
+      setInputValue(value || "");
+    } else {
+      setInputValue(value || "");
+    }
+  };
 
-    type === "currency" ? handleValue(inputValue) : handleValue(value);
+  const handleGoBack = () => {
+    if (goBack && inputValue) {
+      // Pass the current input value when going back
+      handleValue(inputValue);
+    } else if (goBack) {
+      goBack();
+    }
   };
 
   const getInputType = () => {
@@ -42,15 +52,29 @@ const InputAmount: FC<InputAmountProps> = ({
           <CurrencyInput
             prefix="$"
             name={name}
-            onValueChange={(value) => setinputValue(value)}
+            value={inputValue}
+            onValueChange={(value) => handleInputChange(value)}
           />
         );
-
       case "text":
-        return <Input autoFocus name={name} />;
-
+        return (
+          <Input 
+            autoFocus 
+            name={name}
+            value={inputValue}
+            onChange={(e) => handleInputChange(e.target.value)}
+          />
+        );
       default:
-        return <Input type="tel" autoFocus name={name} />;
+        return (
+          <Input 
+            type="tel" 
+            autoFocus 
+            name={name}
+            value={inputValue}
+            onChange={(e) => handleInputChange(e.target.value)}
+          />
+        );
     }
   };
 
@@ -60,7 +84,7 @@ const InputAmount: FC<InputAmountProps> = ({
         <label>{labelText}</label>
         {getInputType()}
         <Button type="submit">submit</Button>
-        {goBack && <Button onClick={() => goBack()}>back</Button>}
+        {goBack && <Button onClick={handleGoBack} type="button">back</Button>}
       </DialogBox>
     </InputForm>
   );
