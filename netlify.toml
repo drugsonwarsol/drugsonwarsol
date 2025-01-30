@@ -4,7 +4,10 @@
   publish = "build"
 
 [functions]
-  node_bundler = "nft"
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+  external_node_modules = ["@xata.io/client"]
+
 
 [[plugins]]
   package = "@xata.io/netlify"
