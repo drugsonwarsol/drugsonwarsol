@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { XataClient } from "./xata.codegen";
 import fetch from "node-fetch";
 

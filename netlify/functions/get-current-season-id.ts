@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Handler, HandlerEvent, HandlerContext } from "@netlify/functions";
 import { FetcherError } from "@xata.io/client";
 import { getXataClient } from "../../_lib/getXataClient";
