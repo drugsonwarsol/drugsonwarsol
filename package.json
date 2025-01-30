@@ -8,15 +8,12 @@
   "npm": ">=9.2.0"
 },
   "scripts": {
-    "prebuild": "xata codegen",
     "build": "CI=false DISABLE_ESLINT_PLUGIN=true react-scripts build",
     "start": "xata codegen && react-scripts start",
     "start:serve": "netlify functions:serve",
     "start:netlify": "netlify dev",
-    "xata:codegen": "xata codegen",
     "test": "react-scripts test",
     "test:clearCache": "react-scripts test --clearCache",
-    "postbuild": "npm run xata:codegen",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable"
   },
