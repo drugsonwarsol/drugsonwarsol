@@ -9,7 +9,7 @@
 },
   "scripts": {
     "prebuild": "npm install --legacy-peer-deps",
-    "build": "xata codegen && react-scripts build",
+    "build": "react-scripts build",
     "start": "xata codegen && react-scripts start",
     "start:serve": "netlify functions:serve",
     "start:netlify": "netlify dev",
