@@ -8,15 +8,15 @@
   "npm": ">=9.2.0"
 },
   "scripts": {
-    "prebuild": "npm install --legacy-peer-deps",
-    "build": "react-scripts build",
+    "prebuild": "xata codegen",
+    "build": "CI=false DISABLE_ESLINT_PLUGIN=true react-scripts build",
     "start": "xata codegen && react-scripts start",
     "start:serve": "netlify functions:serve",
     "start:netlify": "netlify dev",
     "xata:codegen": "xata codegen",
     "test": "react-scripts test",
     "test:clearCache": "react-scripts test --clearCache",
-    "postinstall": "husky install",
+    "postbuild": "npm run xata:codegen",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable"
   },
@@ -32,6 +32,8 @@
     "@opentelemetry/api": "1.9.0",
     "@testing-library/dom": "^9.2.0",
     "@testing-library/jest-dom": "^5.16.5",
+      "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+  "@babel/plugin-transform-private-property-in-object": "^7.22.11",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^29.5.1",

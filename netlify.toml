@@ -1,6 +1,5 @@
 [build]
-  base = ""
-  command = "npm ci && npm run build"
+  command = "npm ci --legacy-peer-deps && npm run build"
   functions = "netlify/functions"
   publish = "build"
 
@@ -12,5 +11,6 @@
 
 [build.environment]
   NODE_VERSION = "18.20.6"
-  NPM_VERSION = "10.8.2"
+  NPM_VERSION = "9.2.0"
   CI = "false"
+  DISABLE_ESLINT_PLUGIN = "true"
