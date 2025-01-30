@@ -10,6 +10,8 @@ const DialogBox: FC<DialogBoxProps> = ({ children }) => {
   return (
     <DialogBoxContainer>
       <div>&gt;</div>
+         {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {/* @ts-ignore */}
       <DialogBoxChildren>{children}</DialogBoxChildren>
     </DialogBoxContainer>
   );

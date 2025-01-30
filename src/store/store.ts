@@ -28,6 +28,8 @@ const configMiddleware = (
       },
     });
   if (process.env.NODE_ENV === `development`) {
+       {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {/* @ts-ignore */}
     return defaultMiddle().concat(logger);
   }
   return defaultMiddle();

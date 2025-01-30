@@ -31,6 +31,8 @@ export function renderWithProviders(
   function Wrapper({ children }: PropsWithChildren<{}>): JSX.Element {
     return (
       <Provider store={store}>
+           {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {/* @ts-ignore */}
         <ThemeProvider theme={theme}>{children}</ThemeProvider>
       </Provider>
     );

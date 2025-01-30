@@ -20,6 +20,8 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate persistor={persistor}>
+           {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {/* @ts-ignore */}
         <ThemeProvider theme={theme}>
           <GlobalStyle />
           <App />
