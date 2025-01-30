@@ -17,12 +17,7 @@
     "prepack": "pinst --disable",
     "postpack": "pinst --enable"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
+
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -42,8 +37,6 @@
     "@types/testing-library__jest-dom": "^5.14.5",
     "@xata.io/cli": "^0.12.0",
     "@xata.io/netlify": "^0.1.1",
-    "eslint": "^8.39.0",
-    "eslint-config-react-app": "^7.0.1",
     "husky": "^8.0.0",
     "netlify-cli": "^15.0.0",
     "pinst": "^3.0.0",
